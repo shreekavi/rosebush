@@ -1,0 +1,19 @@
+%html
+  %head
+    %title= title
+    %link{rel: 'stylesheet', href: '/style.css' }
+  %body
+    .header
+        .logo
+            tweet4book
+        %a{title: 'Home', href: '/' } Home |
+        %a{title: 'Home', href: '/mybooks' }  MyBooks |
+        %a{title: 'Home', href: '/friends' }  Friends |
+        %a{title: 'Home', href: '/profile' }  Profile |
+        %a{title: 'Home', href: '/account' }  Account |
+        %a{title: 'Home', href: '/help' }  Help |
+        %a{title: 'Home', href: '/' } Logout
+    #wrapper
+      = body
+    .footer
+
