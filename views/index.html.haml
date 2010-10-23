@@ -1,7 +1,10 @@
 .body-wrapper
     %h1= title
     .top-buttons
-        Buy || Sell || Donate || Share
+        %a{title: 'Buy', href: '/buy' } Buy |
+        %a{title: 'Sell', href: '/sell' } Sell |
+        %a{title: 'Donate', href: '/donate' } Donate |
+        %a{title: 'Share', href: '/share' } Share |
     .body-container
         .left-column
             Left Column
