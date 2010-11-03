@@ -2,19 +2,23 @@
   %head
     %title= title
     %link{rel: 'stylesheet', href: '/style.css' }
+    %link{rel: 'stylesheet', href: '"//fonts.googleapis.com/css?family=Vollkorn:regular,italic,bold,bolditalic&subset=latin"' }
+    %script{src: '/javascript/jquery-1.4.3.min.js', type: 'text/javascript'}
+    %script{src: '/javascript/tabbedContent.js', type: 'text/javascript'}
+    %script{src: '/javascript/jquery.labelify.js', type: 'text/javascript'}
+    %script{src: '/javascript/scriptloaders.js', type: 'text/javascript'}
   %body
-    .header
-        .logo
-            tweet4book
-        %a{title: 'Home', href: '/' } Home |
-        %a{title: 'Home', href: '/mybooks' }  MyBooks |
-        %a{title: 'Home', href: '/friends' }  Friends |
-        %a{title: 'Home', href: '/profile' }  Profile |
-        %a{title: 'Home', href: '/account' }  Account |
-        %a{title: 'Home', href: '/help' }  Help |
-        %a{title: 'Home', href: '/' } Logout
-    #wrapper
-      = body
-    .footer
-        Copyright (c) 2010
+    .header-container
+        .header
+            .logo
+                tweet 4 book
+            .menu
+                %a{title: 'Home', href: '/' } Home
+                %a{title: 'Home', href: '/mybooks' }  MyBooks
+                %a{title: 'Home', href: '/friends' }  Friends
+                %a{title: 'Home', href: '/profile' }  Profile
+                %a{title: 'Home', href: '/account' }  Account
+                %a{title: 'Home', href: '/help' }  Help
+                %a{title: 'Home', href: '/' } Logout
+    = body
 

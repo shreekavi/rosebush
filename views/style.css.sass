@@ -1,35 +1,78 @@
 body
-  :font-family "Helvetica Neue", "Lucida Grande", "Arial"
-  :font-size 13px
+  :background-color #dfdefa
+  :margin 0
+  :font-family 'Vollkorn', serif
 
-  =text-stroke 1px rgba(255, 255, 255, 0.1)
-  :color #555
-  :margin 0
-h1, h2
-  :margin 0
-  :font-size 22px
-  :color #343434
+.header-container
+  :background-color #354242
 
 .header
-  :background-color #000
-  :height 40px
+  :background-color #354242
+  :height 50px
   :color #fff
   :padding-top 10px
   :padding-left 20px
+  :width 950px
+  :margin 0 auto
+
   a
     :color #fff
   a:link
     :color #fff
     :font-size 14px
-  .logo
-    :font-size 18px
-    :weight bold
+    :text-decoration none
+    :padding-right 5px
+    :padding-left 3px
+.logo
+  :font-family 'Vollkorn', serif
+  :font-size 42px
+  :font-style normal
+  :font-weight 400
+  :text-decoration none
+  :text-transform lowercase
+  :letter-spacing 0em
+  :word-spacing 0em
+  :line-height 1em
+  :float left
+  :margin-right 10px
+  :width 430px
+
+.menu
+  :float left
+  :margin-right 10px
+  :width 510px
+  :margin-right 0px
+  :text-align right
+  :padding-top 15px
+  :word-spacing 5px
+
+h1, h2
+  :margin 0
+  :font-size 22px
+  :color #343434
+
+
+input
+  :border-style solid
+  :border-width 1px
+  :border-color #ccc4cc
+  :height 30px
+  :padding-left 5px
+  :padding-right 5px
+  :font-family Georgia
+  :font-size 18px
+  :width 180px
+  :padding-bottom 5px
+
+
 .footer
   :background-color #c3c3c3
   :height 40px
+
   :color #fff
   :text-align center
-  :padding-top 15px
+  :width 950px
+
   a
     :color #fff
   a:link
@@ -37,12 +80,12 @@ h1, h2
     :font-size 18px
 
 .body-container
-  :padding-top 10px
+  :padding-top 1px
+  :padding-bottom 2px
 
 .body-wrapper
-  :margin-left 20px
-  :padding-top 10px
-  :padding-bottom 10px
+  :width 950px
+  :margin 0 auto
 
   .top-buttons
     a
@@ -52,21 +95,119 @@ h1, h2
       :font-size 18px
 
 .left-column
-  :width 600px
   :float left
-  :padding 6.5px 13px
+  :margin-right 10px
+  :width 630px
   :-webkit-border-radius 5px
   :-moz-border-radius 5px
   :border-radius 5px
-  :background-color #e5e5e5
-  :height 450px
+  :background-color #ccc
+
 .right-column
-  :width 340px
-  :margin-left 630px
-  :padding 6.5px 13px
+  :float left
+  :margin-right 10px
+  :margin-right 0
+  :width 310px
+  :background-color #7f822a
   :-webkit-border-radius 5px
   :-moz-border-radius 5px
   :border-radius 5px
-  :background-color #feebb8
-  :height 450px
+  :height 400px
+
+.right-column-info
+  :padding 10px
+
+.tabbed_content
+  :background-color #354242
+  :width 620px
+
+.tabs
+  :height 62px
+  :position relative
+  .moving_bg
+    :padding 15px
+    :background-color #7F822A
+    :background-image url(/images/arrow_down_green.gif)
+    :position absolute
+    :width 125px
+    :z-index 190
+    :left 0
+    :padding-bottom 29px
+    :background-position bottom left
+    :background-repeat no-repeat
+  .tab_item
+    :display block
+    :float left
+    :padding 15px
+    :width 125px
+    :color #ffffff
+    :text-align center
+    :z-index 200
+    :position relative
+    :cursor pointer
+.slide_content
+  :display block
+  :padding 5px
+
+.tabbed_content
+  .slide_content
+    :overflow hidden
+    :background-color #354242
+    :padding 20px 0 20px 20px
+    :position relative
+    :width 600px
+    :color #ffffff
+
+.tabslider
+  :width 5000px
+
+.tabslider ul
+  :float left
+  :width 560px
+  :margin 0px
+  :padding 0px
+  :margin-right 40px
+
+.tabslider ul a
+  :color #ffffff
+  :text-decoration none
+
+.tabslider ul a:hover
+  :color #aaaaaa
+
+.tabslider ul li
+  :padding-bottom 7px
+
+.form-container
+  :padding 1px
+  :height 215px
+  .form-wrapper
+    .form-left
+      :width 250px
+      :float left
+    .form-right
+      :width 250px
+      :float right
+      :margin-left 300px
+.isbn
+  :padding 3px
+.book-meta
+  :padding 3px
+.more-book-meta
+  :padding 3px
+.buttons
+  :padding 3px
+
+.message-container
+  :margin-top 2px
+  :padding 5px
+  :-webkit-border-radius 5px
+  :-moz-border-radius 5px
+  :border-radius 5px
+  :background-color #97b4cb
+    .message
+      :height 75px
+      :padding-bottom 25px
+      :padding-left 5px
+      :border-bottom 1px solid #ccc
 

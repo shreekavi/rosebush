@@ -1,13 +1,76 @@
-.body-wrapper
-    %h1= title
-    .top-buttons
-        %a{title: 'Buy', href: '/buy' } Buy |
-        %a{title: 'Sell', href: '/sell' } Sell |
-        %a{title: 'Donate', href: '/donate' } Donate |
-        %a{title: 'Share', href: '/share' } Share |
-    .body-container
+.body-container
+    .body-wrapper
         .left-column
-            Left Column
+            .slide_content
+                .tabbed_content
+                    .tabs
+                        .moving_bg
+                            &nbsp;
+                        %span.tab_item
+                             Buy
+                        %span.tab_item
+                             Sell
+                        %span.tab_item
+                             Share
+                        %span.tab_item
+                             Donate
+                    .slide_content
+                        .tabslider
+                            %ul
+                                %div
+                                    .form-container
+                                       %form{method: 'post', action: '/'}
+                                            %input{ type: 'hidden', name: "_method", value: 'put'}
+                                            .isbn
+                                                %input{ type: 'text', name: "isbnNumber", id: 'isbnNumber',title: 'isbn' }
+                                            .book-meta
+                                                %input{ type: 'text', name: "title", id: 'title', title: 'title'}
+                                                %input{ type: 'text', name: 'author', id: 'author', title: 'author' }
+                                                %input{ type: 'text', name: 'publisher', id: 'publisher', title: 'publisher' }
+                                            .more-book-meta
+                                                %input{ type: 'text', name: 'location', id: 'location', title: 'location' }
+                                                %input{ type: 'text', name: 'book_condition', id: 'book_condition', title:'book condition' }
+                                                %input{ type: 'text', name: 'expected_price', id: 'expected_price', title: 'expected price' }
+                                            .message
+                                                %textarea{rows: 5, cols: 66, name: 'message', id: 'message', text: 'Message ..'}
+                                            .buttons
+                                                %input{ type: 'submit', value: 'Post' }
+
+                            %ul
+                                %div
+                                    .form-container
+                                       %form{method: 'post', action: '/'}
+                                            %input{ type: 'hidden', name: "_method", value: 'put'}
+                                            .isbn
+                                                %input{ type: 'text', name: "isbnNumber", id: 'isbnNumber',title: 'isbn' }
+                                            .book-meta
+                                                %input{ type: 'text', name: "title", id: 'title', title: 'title'}
+                                                %input{ type: 'text', name: 'author', id: 'author', title: 'author' }
+                                                %input{ type: 'text', name: 'publisher', id: 'publisher', title: 'publisher' }
+                                            .more-book-meta
+                                                %input{ type: 'text', name: 'location', id: 'location', title: 'location' }
+                                                %input{ type: 'text', name: 'book_condition', id: 'book_condition', title:'book condition' }
+                                                %input{ type: 'text', name: 'expected_price', id: 'expected_price', title: 'expected price' }
+                                            .message
+                                                %textarea{rows: 5, cols: 66, name: 'message', id: 'message', text: 'Message ..'}
+                                            .buttons
+                                                %input{ type: 'submit', value: 'Post' }
+                            %ul
+                                %div
+                                    .form-container
+                                        Share Form
+                            %ul
+                                %div
+                                    .form-container
+                                        Donate Form
+                        %br{style: 'clear: both;'}
+            .message-container
+                :each tweet in tweets
+                    .message
+                        %p= tweet.user_id
+                        %p= tweet.author
+                        %p= tweet.message
+
         .right-column
-            Right Column
+            .right-column-info
 
